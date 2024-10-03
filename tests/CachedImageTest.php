@@ -12,7 +12,7 @@ class CachedImageTest extends TestCase
     public function testSetFromOriginal()
     {
         $image = $this->getTestImage();
-        $cachedImage = new CachedImage();
+        $cachedImage = new CachedImage;
         $cachedImage->setFromOriginal($image, 'foo-key');
 
         $this->assertInstanceOf(AbstractDriver::class, $cachedImage->getDriver());
