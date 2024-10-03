@@ -4,7 +4,7 @@
 > This is a fork of the Intervention package. The original Intervention package is currently abandoned, so we are only using its basic functionalities.
 
 > [!CAUTION]
-> Currently, this package is unstable because it also depends on the `intervention/image package`, where the config path is registered. To make it work, we have turned off auto-discovery in Bagisto and overridden the necessary provider at this stage. In the future, we will either maintain this package or look for an alternative.
+> Currently, this package is unstable because it also depends on the `intervention/image` package, where the config path is registered. To make it work, we have turned off auto-discovery in Bagisto and overridden the necessary provider at this stage. In the future, we will either maintain this package or look for an alternative.
 
 Intervention Image Cache extends the [Intervention Image Class](https://github.com/Intervention/image/) package to be capable of image caching functionality.
 
