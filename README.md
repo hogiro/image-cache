@@ -3,6 +3,9 @@
 > [!NOTE]
 > This is a fork of the Intervention package. The original Intervention package is currently abandoned, so we are only using its basic functionalities.
 
+> [!CAUTION]
+> Currently, this package is unstable because it also depends on the `intervention/image package`, where the config path is registered. To make it work, we have turned off auto-discovery in Bagisto and overridden the necessary provider at this stage. In the future, we will either maintain this package or look for an alternative.
+
 Intervention Image Cache extends the [Intervention Image Class](https://github.com/Intervention/image/) package to be capable of image caching functionality.
 
 The library uses the [Illuminate/Cache](https://github.com/illuminate/cache/) package and can be easily integrated into the [Laravel Framework](https://laravel.com/). Based on your Laravel cache configuration you are able to choose between Filesystem, Database, Memcached or Redis for the temporary buffer store.
@@ -15,7 +18,7 @@ You can install this package quickly and easily with Composer.
 
 Require the package via Composer:
 
-    $ composer require intervention/imagecache
+    $ composer require bagisto/image-cache:dev-master
 
 Now you are able to require the `vendor/autoload.php` file to PSR-4 autoload the library.
 
@@ -32,15 +35,6 @@ In the `$providers` array add the service providers for this package.
         [...]
 
         'Intervention\Image\ImageServiceProvider'
-    ),
-
-Add the facade of this package to the `$aliases` array.
-
-    'aliases' => array(
-
-        [...]
-
-        'Image' => 'Intervention\Image\Facades\Image'
     ),
 
 ## Usage
